@@ -20,7 +20,7 @@ class _EventScreenState extends State<EventScreen> {
               Container(
                 alignment: AlignmentDirectional.bottomCenter,
                 height: 152,
-                width: 375,
+                width: 420,
                 color: Colors.blue,
                 child: const CircleAvatar(
                   radius: 50,
@@ -30,7 +30,7 @@ class _EventScreenState extends State<EventScreen> {
             ],
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 13, left: 90, right: 89),
+            padding: EdgeInsets.only(top: 13, left: 90, right: 79),
             child: Align(
                 alignment: AlignmentDirectional.center,
                 child: Text(
@@ -65,7 +65,7 @@ class _EventScreenState extends State<EventScreen> {
             ),
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.only(top: 5, right: 16, left: 16),
+                padding: const EdgeInsets.only(top: 5, right: 16, left: 16),
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16)),

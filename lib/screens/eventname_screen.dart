@@ -15,6 +15,23 @@ class _EventNameScreenState extends State<EventNameScreen> {
       appBar: AppBar(
         title: const Text('Event Name'),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/newEvent_Screen");
+              },
+              icon: Icon(
+                Icons.add,
+                color: Colors.black,
+              )),
+          IconButton(
+            onPressed: ()  {},
+            icon: const Icon(
+              Icons.logout,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
       body: ListView(
         padding: const EdgeInsetsDirectional.only(
@@ -26,13 +43,13 @@ class _EventNameScreenState extends State<EventNameScreen> {
             height: 20,
           ),
           AspectRatio(
-            aspectRatio: 16 / 9,
+            aspectRatio: 15 /10,
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
                   "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg",
-                )),
+                ),),
               ),
             ),
           ),

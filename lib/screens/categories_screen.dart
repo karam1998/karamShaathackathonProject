@@ -36,12 +36,12 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
             _categories = snapshot.data ?? [];
             return GridView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               itemCount: _categories.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
+                mainAxisSpacing: 5,
+                crossAxisSpacing: 5,
               ),
               itemBuilder: (context, index) {
                 return Card(
@@ -63,7 +63,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 5,),
+                      Text("Event Count : ${_categories[index].eventsCount}"),
+
                     ],
                   ),
                 );

@@ -66,7 +66,7 @@ class _NewEventScreenState extends State<NewEventScreen> with Helpers {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.only(
                             top: 25,
                           ),
@@ -85,14 +85,14 @@ class _NewEventScreenState extends State<NewEventScreen> with Helpers {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.only(top: 25, left: 16),
                           child: Text(
                             'Time',
@@ -116,7 +116,7 @@ class _NewEventScreenState extends State<NewEventScreen> with Helpers {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 25, left: 16),
             child: Text(
               'Hours',
@@ -124,7 +124,7 @@ class _NewEventScreenState extends State<NewEventScreen> with Helpers {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 16, top: 5),
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 5),
             child: AppTextField(
               label: 'Hours',
               controller: _textEditingController,
@@ -156,14 +156,13 @@ class _NewEventScreenState extends State<NewEventScreen> with Helpers {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 16, top: 5),
-            child: Container(
-                child: AppTextField(
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 5),
+            child: AppTextField(
               label: 'Location',
               controller: _textEditingController,
               hint: 'Enter event name',
               prefixIcon: Icons.info,
-            )),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 79, left: 25, right: 25),

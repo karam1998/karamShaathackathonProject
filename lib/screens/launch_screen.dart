@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/prefs/shared_pref_controller.dart';
 
 class LaunchScreen extends StatefulWidget {
   const LaunchScreen({Key? key}) : super(key: key);
@@ -13,9 +14,15 @@ class _LaunchScreenState extends State<LaunchScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/login_screen');
+      if(SharedPrefController().loggedIn){
+        Navigator.pushReplacementNamed(context, "/login_screen");
+      } else {
+        Navigator.pushReplacementNamed(context, "/category_Screen");
+
+      }
     });
   }
+  //Navigator.pushReplacementNamed(context, '/login_screen');
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +34,8 @@ class _LaunchScreenState extends State<LaunchScreen> {
               begin: AlignmentDirectional.topStart,
               end: AlignmentDirectional.bottomEnd,
               colors: [
-                Colors.blue.shade900,
-                Colors.orange.shade900,
+                Colors.indigo.shade900,
+                Colors.indigo.shade900,
               ]),
         ),
         child: const Text(

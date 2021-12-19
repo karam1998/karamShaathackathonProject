@@ -141,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                               prefixIcon: Icons.lock,
                               obscureText: true, label: 'Password',
                             ),
-                            const SizedBox(height: 25),
+                            const SizedBox(height: 85),
                             ElevatedButton(
                               onPressed: () => performLogin(),
                               child: const Text(

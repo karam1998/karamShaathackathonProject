@@ -8,9 +8,7 @@ class ApiSettings {
   }
   static const users = _apiUrl + 'users';
   static const categories = _apiUrl + 'categories';
-  static const login = _apiUrl + 'students/auth/login';
+  static const login = _apiUrl + 'auth/login';
   static const logoutUser = _apiUrl + "auth/logout";
-  // static const logoutUser = _apiUrl + "auth/logout";
-
   static const images = _apiUrl + 'student/images/{id}';
 }

@@ -12,13 +12,12 @@ class UserApiController {
     var response = await http.get(
       url,
       headers: {HttpHeaders.authorizationHeader: SharedPrefController().token},
-    );print( SharedPrefController().token);
+    );
     if (response.statusCode == 200) {
       print("we are her");
-      var categoriesJsonArray = jsonDecode(response.body)['list'] as List;
-      return categoriesJsonArray
-          .map((jsonObject) => Category.fromJson(jsonObject))
-          .toList();
+      var jsonResponse = jsonDecode(response.body)['list'] as List;
+      List<Category> category = jsonResponse.map((e) => Category.fromJson(e)).toList();
+      return category;
     }
     return [];
   }

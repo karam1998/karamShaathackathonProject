@@ -3,7 +3,7 @@ class Category {
   late String nameEn;
   late String nameAr;
   late int active;
-  late String image;
+  late String   image;
   late int eventsCount;
 
   Category.fromJson(Map<String, dynamic> json) {
